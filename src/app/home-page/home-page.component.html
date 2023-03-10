@@ -1,1 +1,12 @@
 <p>home-page works!</p>
+
+<hr>
+<div *ngFor="let item of fromResolver?.users">
+  {{item.first_name}}
+</div>
+
+
+<hr>
+<div *ngFor="let item of fromService">
+  {{item.first_name}}
+</div>

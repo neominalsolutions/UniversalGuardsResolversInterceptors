@@ -3,12 +3,16 @@ import { RouterModule, Routes } from '@angular/router';
 import { DashboardPageComponent } from './dashboard-page/dashboard-page.component';
 import { AuthGuard } from './guards/auth.guard';
 import { HomePageComponent } from './home-page/home-page.component';
+import { HomeResolver } from './home-page/home.resolver';
 import { LoginPageComponent } from './login-page/login-page.component';
 
 const routes: Routes = [
   {
     path: '',
     component: HomePageComponent,
+    resolve: {
+      response: HomeResolver, // Homeresolver bize data hazırlasın
+    },
   },
   {
     path: 'dashboard',
